@@ -33,5 +33,6 @@ def start_browser():
                                             "download.directory_upgrade": True,
                                             "safebrowsing.enabled": True})
     driver = webdriver.Chrome(executable_path=DRIVER_DIR, chrome_options=chrome_options)
+    driver.maximize_window()
     local_data.driver = driver
     return driver
