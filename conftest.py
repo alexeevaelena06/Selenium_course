@@ -42,6 +42,7 @@ def start_browser():
         driver = webdriver.Ie(capabilities=cap)
     elif local_data.browser == 'firefox':
         firefox_capabilities = DesiredCapabilities.FIREFOX
+        # firefox_capabilities['marionette'] = False
         driver = webdriver.Firefox(capabilities=firefox_capabilities)
     elif local_data.browser == 'edge':
         edge_capabilities = DesiredCapabilities.EDGE
