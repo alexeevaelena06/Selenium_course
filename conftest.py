@@ -43,6 +43,8 @@ def start_browser():
     elif local_data.browser == 'firefox':
         firefox_capabilities = DesiredCapabilities.FIREFOX
         # firefox_capabilities['marionette'] = False
+        # driver = webdriver.Firefox(capabilities=firefox_capabilities,
+        #                            firefox_binary="C:\\Program Files\\Firefox Nightly\\firefox.exe")
         driver = webdriver.Firefox(capabilities=firefox_capabilities)
     elif local_data.browser == 'edge':
         edge_capabilities = DesiredCapabilities.EDGE
