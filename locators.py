@@ -1,6 +1,6 @@
 """""Path to website"""""
 
-admin_login = ['http://localhost/litecart/admin/']
+admin_login = ['http://localhost/litecart/admin/', 'http://localhost/litecart/admin/login.php']
 
 website_litecart = ['http://localhost/litecart/en/']
 
@@ -31,3 +31,7 @@ locator_all_geozones = ["tr.row td:nth-child(6)"]
 locator_all_towns = ["table.dataTable tr td:nth-child(3)"]
 
 locator_countries = ["div[id='box-apps-menu-wrapper'] li:nth-child(3)"]
+
+locator_information = ["//div[@id='tab-information']//select[normalize-space(.)='-- Select -- ACME Corp.']//option[2]"]
+
+locator_price = ["//div[@id='tab-prices']/table[1]/tbody/tr/td/select//option[2]"]
