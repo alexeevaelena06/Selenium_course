@@ -4,6 +4,7 @@ import threading
 from selenium import webdriver
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
+from locators import admin_login
 
 
 PROJECT_ROOT = os.path.dirname(__file__)
@@ -54,3 +55,13 @@ def start_browser():
     driver.maximize_window()
     local_data.driver = driver
     return driver
+
+
+def login_admin(driver):
+    driver.get(admin_login[1])
+    driver.implicitly_wait(60)
+    find_and_fill_element(driver, element_name="username", value="admin")
+    find_and_fill_element(driver, element_name="password", value="admin")
+    driver.find_element_by_name("login").click()
+
+

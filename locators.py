@@ -1,12 +1,14 @@
 """""Path to website"""""
 
-admin_login = ['http://localhost/litecart/admin/']
+admin_login = ['http://localhost/litecart/admin/', 'http://localhost/litecart/admin/login.php']
 
 website_litecart = ['http://localhost/litecart/en/']
 
 page_countries = ['http://localhost/litecart/admin/?app=countries&doc=countries']
 
 page_geozones = ['http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones']
+
+page_catalogue = ['http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1']
 
 admin = {'login_name': 'admin', 'login_password': 'admin'}
 
