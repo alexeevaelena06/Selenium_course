@@ -2,9 +2,9 @@ import os
 import pytest
 import threading
 from selenium import webdriver
-from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 from locators import admin_login
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 PROJECT_ROOT = os.path.dirname(__file__)
@@ -31,10 +31,11 @@ def start_browser():
     if local_data.browser == 'chrome':
         chrome_options = Options()
         chrome_options.add_experimental_option('prefs',
-                                           {"download.default_directory": DOWNLOADS_DIR,
-                                            "download.prompt_for_download": False,
-                                            "download.directory_upgrade": True,
-                                            "safebrowsing.enabled": True})
+                                               {"download.default_directory": DOWNLOADS_DIR,
+                                                "download.prompt_for_download": False,
+                                                "download.directory_upgrade": True,
+                                                "safebrowsing.enabled": True,
+                                                "browser": "ALL"})
         driver = webdriver.Chrome(chrome_options=chrome_options)
 
     elif local_data.browser == 'IE':
@@ -65,3 +66,7 @@ def login_admin(driver):
     driver.find_element_by_name("login").click()
 
 
+def find_and_fill_element(driver, element_name, value):
+    driver.find_element_by_name(element_name).click()
+    driver.find_element_by_name(element_name).clear()
+    driver.find_element_by_name(element_name).send_keys(value)

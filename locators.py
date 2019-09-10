@@ -33,3 +33,5 @@ locator_all_geozones = ["tr.row td:nth-child(6)"]
 locator_all_towns = ["table.dataTable tr td:nth-child(3)"]
 
 locator_countries = ["div[id='box-apps-menu-wrapper'] li:nth-child(3)"]
+
+locator_rubber_ducks = ".//*[@id='content']/form/table/tbody/tr/td[./img and ./a]/a"
