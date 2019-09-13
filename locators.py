@@ -2,7 +2,7 @@
 
 admin_login = ['http://localhost/litecart/admin/']
 
-website_litecart = ['http://localhost/litecart/en/']
+website_litecart = 'http://localhost/litecart/en/'
 
 page_countries = ['http://localhost/litecart/admin/?app=countries&doc=countries']
 
@@ -10,7 +10,7 @@ page_geozones = ['http://localhost/litecart/admin/?app=geo_zones&doc=geo_zones']
 
 admin = {'login_name': 'admin', 'login_password': 'admin'}
 
-checkout = ["http://localhost/litecart/en/checkout"]
+checkout = "http://localhost/litecart/en/checkout"
 
 """""Locators of elements"""""
 
