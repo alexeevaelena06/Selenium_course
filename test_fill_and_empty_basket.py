@@ -1,9 +1,9 @@
 import random
 import time
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from locators import *
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+from Selenium_course.locators import *
 
 
 def test_fill_and_empty_basket(fixture):
