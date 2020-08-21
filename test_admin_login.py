@@ -1,6 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import admin_login, admin
+from Selenium_course.locators import admin_login, admin
 
 
 def test_admin_login(fixture):
